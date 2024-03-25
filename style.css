@@ -1,0 +1,341 @@
+@charset "utf-8";
+/*RESET CSS*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*GLOBAL CSS*/
+.purple {
+  background-color: #bfa2ed;
+}
+
+.lime {
+  background-color: #f0ff64;
+}
+
+.offWhite {
+  background-color: #fffbeb;
+}
+
+.grey {
+  background-color: #666666;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: "Kaftan Serif - Trial";
+  src: url("KaftanSerifTrial-Regular.woff2") format("woff2"),
+    url("KaftanSerifTrial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.roc-grotesk {
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*LANDING and HOME PAGE*/
+html * {
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #fffbeb;
+}
+
+/* LOGO */
+.logoAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.logoAnimation video {
+  max-width: 100%;
+  height: auto; 
+}
+
+.menu {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding: 15px 7vw;
+  box-sizing: border-box;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #bfa2ed;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+#landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#landing .landingText {
+  display: block;
+  padding: 9px 0;
+  border-radius: 50px;
+  position: relative;
+  margin: 0 auto;
+  background: #f0ff64;
+  width: 20%;
+}
+
+#landing p {
+  color: #666666;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1vw;
+}
+
+#teaser {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.imageLeft,
+.imageRight {
+  position: relative;
+}
+
+.imageLeft img.layer1,
+.imageRight img.layer1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+}
+
+.imageLeft img.layer2,
+.imageRight img.layer2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+}
+
+.imageLeft img.layer3,
+.imageRight img.layer3 {
+  position: relative;
+  width: 35%;
+  bottom: 50px;
+}
+
+.imageRight {
+  transform: scaleX(-1);
+}
+
+.backgroundHome {
+  position: relative;
+}
+
+.landFront,
+.landBack {
+  position: absolute;
+}
+
+.landBack {
+  top: 0;
+}
+
+.landFront {
+  margin-top: 50vh;
+}
+
+/* LINKS STYLING */
+.links {
+  position: absolute;
+  border: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.archive {
+  position: relative;
+  top: 600px;
+  left: 150px;
+}
+
+.works {
+  position: relative;
+  top: 400px;
+  left: 100px;
+}
+
+.contact {
+  position: relative;
+  top: 750px;
+  left: 450px;
+}
+
+/* IMAGE HOVER */
+.links img:hover {
+  -webkit-filter: drop-shadow(4px 2px 0 black) drop-shadow(-2px -2px 0 black);
+  filter: drop-shadow(4px 2px 0 black) drop-shadow(-2px -2px 0 black);
+}
+
+/*WORKS*/
+
+/*WORKS INDIVIDUAL*/
+
+/*ARCHIVE*/
+
+/*ABOUT ME*/
+
+/*CONTACT*/

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bianca</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- ADOBE FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/xta4tps.css" />
+  </head>
+
+  <body>
+    <section id="landing">
+      <header>
+        <div class="menu" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </header>
+
+      <div class="logoAnimation">
+		<video autoplay loop muted plays-inline class="logoAnimation">
+			<source src="Images/logoAnimation.mp4" type="video/mp4">
+		</video>
+      </div>
+      <div class="landingText">
+        <p>Welcome to my Creative Journey</p>
+      </div>
+    </section>
+
+    <!-- <section id="teaser">
+      <div class="imageLeft">
+        <img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" />
+        <img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer1" />
+        <img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer2" />
+      </div>
+      <div class="imageRight">
+        <img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" />
+        <img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer1" />
+        <img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer2" />
+      </div>
+    </section> -->
+    <section id="homePage">
+      <div class="backgroundHome">
+        <img src="Images/landBack.png" alt="Land Back" class="landBack" />
+        <img src="Images/landFront.png" alt="Land Front" class="landFront" />
+      </div>
+      <div class="links">
+		<a class="about" href="#"><img src="Images/house.png"></a>
+		<a class="archive" href="#"><img src="Images/book.png"></a>
+		<a class="works" href="#"><img src="Images/works.png"></a>
+		<a class="contact" href="#"><img src="Images/contact.png"></a>
+	  </div>
+    </section>
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+  </body>
+</html>
