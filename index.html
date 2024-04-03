@@ -1,153 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Bianca</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- ADOBE FONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/xta4tps.css" />
-  </head>
+<head>
+<meta charset="utf-8">
+<title>;Bianca</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+	<!-- ADOBE FONTS -->
+<link rel="stylesheet" href="https://use.typekit.net/xta4tps.css">
+</head>
 
-  <body>
-    <section id="landing">
-      <header>
-        <div class="menu" onclick="myFunction(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-      </header>
+<body>
+	<section id="landing">
+		<header>
+			<div class="menu" onclick="myFunction(this)">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+			</div>
+		</header>
+		
+		<div class="logoAnimation">
+			<video autoplay loop muted plays-inline class="logoAnimation"><source src="Images/logoAnimation.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="landingText">
+			<p>Welcome to my Creative Journey</p>
+		</div>
+	</section>
+	
+	<section id="teaser">
+		<div class="teaserText">
+			<p>Ready to see some amazing works?</p>
+		</div>
+		
+		
+		<div class="imageLeft">
+        	<img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" id="layer3"/>
+        	<img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer2" id="layer2"/>
+			<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer1" id="layer1"/>
+			<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0"/>
+		</div>
 
-      <div class="logoAnimation">
-        <video autoplay loop muted plays-inline class="logoAnimation">
-          <source src="Images/logoAnimation.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="landingText">
-        <p>Welcome to my Creative Journey</p>
-      </div>
+		<div class="imageRight">
+        	<img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" id="layer3Right"/>
+        	<img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer2" id="layer2Right"/>
+        	<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer1" id="layer1Right"/>
+        	<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0"/>
+		</div>
     </section>
-
-    <section id="teaser">
-      <div class="imageLeft">
-        <img
-          src="Images/thirdLayerHPLeft.png"
-          alt="Image 1"
-          class="layer3"
-          id="layer3"
-        />
-        <img
-          src="Images/secondLayerHPLeft.png"
-          alt="Image 2"
-          class="layer2"
-          id="layer2"
-        />
-        <img
-          src="Images/firstLayerHPLeft.png"
-          alt="Image 3"
-          class="layer1"
-          id="layer1"
-        />
-        <img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0" />
-      </div>
-
-      <p class="teaserText">Ready to see some amazing works?</p>
-
-      <div class="imageRight">
-        <img
-          src="Images/thirdLayerHPLeft.png"
-          alt="Image 1"
-          class="layer3"
-          id="layer3-right"
-        />
-        <img
-          src="Images/secondLayerHPLeft.png"
-          alt="Image 2"
-          class="layer2"
-          id="layer2-right"
-        />
-        <img
-          src="Images/firstLayerHPLeft.png"
-          alt="Image 3"
-          class="layer1"
-          id="layer1-right"
-        />
-        <img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0" />
-      </div>
-    </section>
-
-    <section id="homePage">
-      <div class="backgroundHome">
-        <img src="Images/landBack.png" alt="Land Back" class="landBack" />
-        <img src="Images/landFront.png" alt="Land Front" class="landFront" />
-      </div>
-      <div class="links">
-        <a class="about" href="#"><img src="Images/house.png" /></a>
-        <a class="archive" href="#"><img src="Images/book.png" /></a>
-        <a class="works" href="#"><img src="Images/works.png" /></a>
-        <a class="contact" href="#"><img src="Images/contact.png" /></a>
-      </div>
-    </section>
-    <footer></footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-      }
-
-      const layer3 = document.getElementById("layer3");
+	
+	<section id="homePage">
+		<div class="backgroundHome">
+        	<img src="Images/landBack.png" alt="Land Back" class="landBack"/>
+        	<img src="Images/landFront.png" alt="Land Front" class="landFront"/>
+		</div>
+		<div class="links">
+			<a class="about" href="#"><img src="Images/house.png" alt="house"></a>
+			<a class="archive" href="#"><img src="Images/book.png" alt="book"></a>
+			<a class="works" href="#"><img src="Images/works.png" alt="works"></a>
+			<a class="contact" href="#"><img src="Images/contact.png" alt="contact"></a>
+		</div>
+	</section>
+	
+	
+	<footer>
+	
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		function myFunction(x) {
+  			x.classList.toggle("change");
+		}
+		
+const layer3 = document.getElementById("layer3");
       const layer2 = document.getElementById("layer2");
       const layer1 = document.getElementById("layer1");
-      const layer3Right = document.getElementById("layer3-right");
-      const layer2Right = document.getElementById("layer2-right");
-      const layer1Right = document.getElementById("layer1-right");
+      const layer3Right = document.getElementById("layer3Right");
+      const layer2Right = document.getElementById("layer2Right");
+      const layer1Right = document.getElementById("layer1Right");
 
-      // Function to handle scroll animation
+
       function handleScroll() {
-        // Calculate the scroll progress
+
         const scrollProgress =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
-        // Determine direction based on scroll position
         const direction = window.scrollY > 0 ? "left" : "right";
 
-        // Apply transform based on scroll progress and direction
-        layer3.style.transform = `translateY(${
-          scrollProgress * 50
-        }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
+		layer3.style.transform = `translateY(${
+		  	scrollProgress * 50
+	  	}px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
+			scrollProgress * 90
+		  )}%)`;
         layer2.style.transform = `translateY(${
-          scrollProgress * 90
+			scrollProgress * 90
         }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
-        layer1.style.transform = `translateY(${
-          scrollProgress * 140
-        }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
+			scrollProgress * 90
+		)}%)`;
+		layer1.style.transform = `translateY(${
+			scrollProgress * 90
+	  	}px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
+			scrollProgress * 90
+		)}%)`;
 
-        layer3Right.style.transform = `translateY(${
-          scrollProgress * 50
-        }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
-        layer2Right.style.transform = `translateY(${
-          scrollProgress * 90
-        }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
-        layer1Right.style.transform = `translateY(${
-          scrollProgress * 140
-        }px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
-          scrollProgress * 90
-        )}%)`;
-      }
+		layer3Right.style.transform = `translateY(${
+			scrollProgress * 50
+	  	}px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
+			scrollProgress * 90
+		)}%)`;
+		layer2Right.style.transform = `translateY(${
+			scrollProgress * 90
+	  	}px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
+			scrollProgress * 90
+		)}%)`;
+		layer1Right.style.transform = `translateY(${
+			scrollProgress * 90
+	  	}px) translateX(${direction === "left" ? "-" : ""}${Math.abs(
+			scrollProgress * 90
+		)}%)`;
+	  }
 
-      // Attach scroll event listener
-      window.addEventListener("scroll", handleScroll);
-    </script>
-  </body>
+		window.addEventListener("scroll", handleScroll);
+		
+	</script>
+</body>
 </html>

@@ -1,0 +1,113 @@
+.headerMain {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.ulWrapper {
+  width: 40%;
+  /* border: 1px solid #000; */
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    width: calc(100% / 2);
+    text-align: center;
+  }
+
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+  a:hover {
+    letter-spacing: 4px;
+    transition: 0.6s;
+  }
+}
+
+.active a {
+    border: 15px solid transparent;
+    letter-spacing: 4px;
+	background-color: #f0ff64;
+	border-radius: 50px;
+	margin: 2% 2%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: static;
+  max-width: 20vh;
+  max-height: 20vw;
+}
+
+.logo img {
+  width: 100%;
+}
+
+
+/* WORKS */
+
+
+#works {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hammerfistContainer,
+.girangContainer,
+.candyContainer {
+    position: relative;
+    margin-bottom: 20vh;
+    width: 70%;
+    justify-content: center;
+}
+
+.worksHammerfist,
+.worksGirang,
+.worksCandy {
+    width: 100%;
+}
+
+.zoom-out {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.hammerfistCategories,
+.girangCategories,
+.candyCategories {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hammerfistCategories p,
+.girangCategories p,
+.candyCategories p {
+    margin: 5vh;
+    padding: 5px;
+    border: 1px solid #cfff04;
+    color: #cfff04;
+    border-radius: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}

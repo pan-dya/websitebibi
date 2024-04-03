@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styleTest.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <section>
+      <header class="headerMain">
+        <div class="ulWrapper">
+          <ul>
+            <li class="active"><a href="#">Works</a></li>
+            <li><a class="archiveBtn" href="archive.html">Archive</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img
+            src="Images/logoBianca.png"
+            alt="Bianca Portfolio Website Logo"
+          />
+        </div>
+        <div class="ulWrapper">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+    </section>
+
+    <section id="works">
+      <div class="hammerfistContainer">
+        <img
+          src="Images/worksHammerfist.jpg"
+          alt="Hammerfist Advertising Campaign Thumbnail"
+          class="worksHammerfist"
+        />
+        <div class="hammerfistCategories">
+          <p>Brand Identity</p>
+          <p>Logo Design</p>
+          <p>Motion Design</p>
+          <p>Web Design</p>
+          <p>Social Media</p>
+          <p>Digital Strategy</p>
+          <p>Environment</p>
+        </div>
+      </div>
+
+      <div class="girangContainer">
+        <img
+          src="Images/worksGirang.jpg"
+          alt="Girang Event Thumbnail"
+          class="worksGirang"
+        />
+        <div class="girangCategories">
+          <p>Advertising Campaign</p>
+          <p>Brand Utility</p>
+          <p>Digital Experience</p>
+          <p>Outdoor</p>
+          <p>Packaging Design</p>
+        </div>
+      </div>
+
+      <div class="candyContainer">
+        <img
+          src="Images/worksCandy.jpg"
+          alt="White Rabbit Candy Advertising Campaign"
+          class="worksCandy"
+        />
+        <div class="candyCategories">
+          <p>Event Identity</p>
+          <p>Editorial</p>
+          <p>Motion Design</p>
+          <p>Packaging Design</p>
+          <p>Typography</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(window).scroll(function () {
+            var hammerfistOffset = $(".hammerfistContainer").offset().top;
+            var scrollTop = $(window).scrollTop();
+            var relativeScroll = scrollTop - hammerfistOffset + $(window).height() / 2;
+
+            var hammerfistPixs = relativeScroll / 500
+            $(".hammerfistContainer").css({
+                "-webkit-filter": "blur(" + hammerfistPixs + "px)",
+                "filter": "blur(" + hammerfistPixs + "px)"
+            });
+            $(".hammerfistContainer").css("transform", "translateY(" + hammerfistPixs * 150 + "px) scale(" + (1 - hammerfistPixs / 10) + ")");
+
+            // Animation for Girang Container
+            if (relativeScroll > 0) {
+                var girangPixs = relativeScroll / 3000;
+                $(".girangContainer").css({
+                    "-webkit-filter": "blur(" + girangPixs + "px)",
+                    "filter": "blur(" + girangPixs + "px)"
+                });
+                $(".girangContainer").css("transform", "translateY(" + girangPixs * 400 + "px) scale(" + (1 - girangPixs / 7) + ")");
+            }
+
+        });
+      });
+    </script>
+  </body>
+</html>
