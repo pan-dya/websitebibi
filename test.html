@@ -1,110 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
     <title>Document</title>
-    <link href="styleTest.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <section>
-      <header class="headerMain">
-        <div class="ulWrapper">
-          <ul>
-            <li class="active"><a href="#">Works</a></li>
-            <li><a class="archiveBtn" href="archive.html">Archive</a></li>
-          </ul>
-        </div>
-        <div class="logo">
-          <img
-            src="Images/logoBianca.png"
-            alt="Bianca Portfolio Website Logo"
-          />
-        </div>
-        <div class="ulWrapper">
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </header>
+</head>
+<body>
+    <section id="landing">
+		<header>
+			<div class="menu" onclick="myFunction(this)">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+			</div>
+		</header>
+		
+		<div class="logoAnimation">
+			<video autoplay loop muted plays-inline class="logoAnimation"><source src="Images/logoAnimation.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="landingText">
+			<p>Welcome to my Creative Journey</p>
+		</div>
+	</section>
+	
+	<section id="teaser">
+		<div class="teaserText">
+			<p>Ready to see<br>some amazing works?</p>
+		</div>
+		
+		
+		<div class="imageLeft">
+        	<img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" id="layer3"/>
+        	<img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer2" id="layer2"/>
+			<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer1" id="layer1"/>
+			<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0"/>
+		</div>
+
+		<div class="imageRight">
+        	<img src="Images/thirdLayerHPLeft.png" alt="Image 1" class="layer3" id="layer3Right"/>
+        	<img src="Images/secondLayerHPLeft.png" alt="Image 2" class="layer2" id="layer2Right"/>
+        	<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer1" id="layer1Right"/>
+        	<img src="Images/firstLayerHPLeft.png" alt="Image 3" class="layer0"/>
+		</div>
     </section>
+	
+	<section id="homePage">
+		<div class="backgroundHome landBack"></div>
+    	<div class="backgroundHome landFront"></div>
 
-    <section id="works">
-      <div class="hammerfistContainer">
-        <img
-          src="Images/worksHammerfist.jpg"
-          alt="Hammerfist Advertising Campaign Thumbnail"
-          class="worksHammerfist"
-        />
-        <div class="hammerfistCategories">
-          <p>Brand Identity</p>
-          <p>Logo Design</p>
-          <p>Motion Design</p>
-          <p>Web Design</p>
-          <p>Social Media</p>
-          <p>Digital Strategy</p>
-          <p>Environment</p>
+        <div class="grid-container">
+            <!-- Items to be placed in the grid -->
+            <div class="item meadowBehind"><img src="Images/meadowBehind.png" alt="Meadow behind house"></div>
+            <div class="item bushBehind"><img src="Images/bushBehind.png" alt="Bush Behind House"></div>
+            <div class="item treeBehindLeft"><img src="Images/treeBehindLeft.png" alt="Tree Behind Fence Left"></div>
+            <div class="item treeBehindRight"><img src="Images/treeBehindRight.png" alt="Two Trees Behind Fence Right"></div>
+            <div class="item bushFront"><img src="Images/bushFront.png" alt="Bush Front with Flowers"></div>
+            <div class="item flowerFront"><img src="Images/flowerFront.png" alt="Flowers behind Bush Front"></div>
+    
+            <!-- Navigation links -->
+            <div class="item about"><a href="about.html"><img src="Images/house.png" alt="About"></a></div>
+            <div class="item archive"><a href="archive.html"><img src="Images/book.png" alt="Archive"></a></div>
+            <div class="item works"><a href="works.html"><img src="Images/works.png" alt="Works"></a></div>
+            <div class="item contact"><a href="contact.html"><img src="Images/contact.png" alt="Contact"></a></div>
         </div>
-      </div>
 
-      <div class="girangContainer">
-        <img
-          src="Images/worksGirang.jpg"
-          alt="Girang Event Thumbnail"
-          class="worksGirang"
-        />
-        <div class="girangCategories">
-          <p>Advertising Campaign</p>
-          <p>Brand Utility</p>
-          <p>Digital Experience</p>
-          <p>Outdoor</p>
-          <p>Packaging Design</p>
-        </div>
-      </div>
-
-      <div class="candyContainer">
-        <img
-          src="Images/worksCandy.jpg"
-          alt="White Rabbit Candy Advertising Campaign"
-          class="worksCandy"
-        />
-        <div class="candyCategories">
-          <p>Event Identity</p>
-          <p>Editorial</p>
-          <p>Motion Design</p>
-          <p>Packaging Design</p>
-          <p>Typography</p>
-        </div>
-      </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $(window).scroll(function () {
-            var hammerfistOffset = $(".hammerfistContainer").offset().top;
-            var scrollTop = $(window).scrollTop();
-            var relativeScroll = scrollTop - hammerfistOffset + $(window).height() / 2;
-
-            var hammerfistPixs = relativeScroll / 500
-            $(".hammerfistContainer").css({
-                "-webkit-filter": "blur(" + hammerfistPixs + "px)",
-                "filter": "blur(" + hammerfistPixs + "px)"
-            });
-            $(".hammerfistContainer").css("transform", "translateY(" + hammerfistPixs * 150 + "px) scale(" + (1 - hammerfistPixs / 10) + ")");
-
-            // Animation for Girang Container
-            if (relativeScroll > 0) {
-                var girangPixs = relativeScroll / 3000;
-                $(".girangContainer").css({
-                    "-webkit-filter": "blur(" + girangPixs + "px)",
-                    "filter": "blur(" + girangPixs + "px)"
-                });
-                $(".girangContainer").css("transform", "translateY(" + girangPixs * 400 + "px) scale(" + (1 - girangPixs / 7) + ")");
-            }
-
-        });
-      });
-    </script>
-  </body>
+	</section>
+</body>
 </html>

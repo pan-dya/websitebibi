@@ -1,0 +1,223 @@
+
+/*LANDING and HOME PAGE*/
+html * {
+	font-family: "roc-grotesk", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	background-color: #fffbeb;
+	overflow-x: hidden;
+}
+header {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.menu {
+  	display: inline-block;
+  	cursor: pointer;
+	position: relative;
+	width: 25px;
+	margin-right: 7vw;
+	margin-top: 3vh;
+/*	padding: 15px 7vw;*/
+	box-sizing: border-box;
+}
+
+.bar1, .bar2, .bar3 {
+  	width: 25px;
+  	height: 3px;
+ 	background-color: #BFA2ED;
+ 	margin: 5px 0;
+  	transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+ 	transform: translate(0, 8px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+	opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+ 	transform: translate(0, -8px) rotate(45deg);
+}
+
+#landing {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+/* LOGO */
+.logoAnimation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%; 
+	margin: 0 auto;
+}
+
+.logoAnimation video {
+	max-width: 100%; 
+	height: auto;
+}
+
+#landing .landingText {
+	display: block;
+	padding: 10px;
+	border-radius: 50px;
+	position: relative;
+	margin: 0 auto;
+	background: #f0ff64;
+	width: 20%;
+}
+
+#landing p {
+	color: #666666;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1vw;
+}
+
+#teaser {
+	justify-content: center;
+	align-items: center;
+	position: relative;
+/*	background-color: pink;*/
+	width: 100%;
+	height: 200vh;
+}
+
+.teaserText{
+	text-align: center;
+	position: absolute;
+	top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: #666;
+/*	background-color: aquamarine;*/
+}
+.imageLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+/*	background: red;*/
+}
+.imageRight{
+	position: absolute;
+	top: 0;
+	right: 0;
+/*	background: green;*/
+	-webkit-transform: scaleX(-1);
+  	transform: scaleX(-1);
+}
+
+.layer3, .layer2, .layer1 {
+	position: absolute;
+	transition: transform 0.5s ease-out;
+	width: 35vw;
+}
+
+
+.layer2 {
+	z-index: 3;
+	top: 45vh;
+}
+
+.layer1 {
+	z-index: 4;
+	top: 85vh;
+}
+
+.layer0 {
+	visibility: hidden;
+}
+
+
+.backgroundHome {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.landBack, .landFront {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    background-size: cover;
+    background-position: center;
+}
+
+.landBack {
+    background-image: url('Images/landBack.png');
+    z-index: -3;
+    /* top: 300vh; */
+    width: 100%;
+    height: 100%;
+}
+
+.landFront {
+    background-image: url('Images/landFront.png');
+    z-index: -2;
+    margin-top: 60vh;
+	width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .backgroundHome {
+        height: 80vh; /* Adjust height for tablets */
+    }
+    .landFront {
+        margin-top: 40vh; /* Adjust vertical positioning for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust positioning and sizing for phones */
+    .backgroundHome {
+        height: 60vh; /* Adjust height for phones */
+    }
+    .landFront {
+        margin-top: 20vh; /* Adjust vertical positioning for phones */
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3); /* Example background color for visualization */
+    border: 1px solid #ccc; /* Example border for visualization */
+    overflow: hidden; /* Hide overflow to prevent content from overflowing */
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific positioning for each grid item */
+.bushFront { grid-area: 5 / 8 / 1 / 1; }
+.flowerFront { grid-area: 5 / 8 / 1 / 1; }
+.meadowBehind { grid-area: 1 / 1 /  3 / 4; }
+.bushBehind { grid-area: 1 / 1 /  3 / 2; }
+.treeBehindLeft { grid-area: 4 / 4 / span 3 / span 1; }
+.treeBehindRight { grid-area: 2 / 6 / span 4 / span 2; }
+.about { grid-area: 6 / 1 / span 1 / span 1; }
+.archive { grid-area: 6 / 2 / span 1 / span 1; }
+.works { grid-area: 6 / 3 / span 1 / span 1; }
+.contact { grid-area: 6 / 4 / span 1 / span 1; }

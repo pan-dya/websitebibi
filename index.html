@@ -29,7 +29,7 @@
 	
 	<section id="teaser">
 		<div class="teaserText">
-			<p>Ready to see some amazing works?</p>
+			<p>Ready to see<br>some amazing works?</p>
 		</div>
 		
 		
@@ -49,22 +49,35 @@
     </section>
 	
 	<section id="homePage">
-		<div class="backgroundHome">
-        	<img src="Images/landBack.png" alt="Land Back" class="landBack"/>
-        	<img src="Images/landFront.png" alt="Land Front" class="landFront"/>
+		<div class="backgroundHome landBack"></div>
+    	<div class="backgroundHome landFront"></div>
+		<div class="bushFront">
+			<img src="Images/bushFront.png" alt="Bush Front with Flowers"/>
 		</div>
+		<div class="flowerFront">
+			<img src="Images/flowerFront.png" alt="Flowers behind Bush Front"/>
+		</div>
+		<div class="meadowBehind">
+			<img src="Images/meadowBehind.png" alt="meadow behind house infront of bushBehind"/>
+		</div>
+		<div class="bushBehind">
+			<img src="Images/bushBehind.png" alt="Bush Behind House"/>
+		</div>
+		<div class="treeBehindLeft">
+			<img src="Images/treeBehindLeft.png" alt="tree Behind Fence Left"/>
+		</div>
+		
+		<div class="treeBehindRight">
+		<img src="Images/treeBehindRight.png" alt="2 tree Behind Fence Right"/>
+		</div>
+		
 		<div class="links">
-			<a class="about" href="#"><img src="Images/house.png" alt="house"></a>
-			<a class="archive" href="#"><img src="Images/book.png" alt="book"></a>
-			<a class="works" href="#"><img src="Images/works.png" alt="works"></a>
-			<a class="contact" href="#"><img src="Images/contact.png" alt="contact"></a>
+			<a class="about" href="about.html"><img src="Images/house.png" alt="about"></a>
+			<a class="archive" href="archive.html"><img src="Images/book.png" alt="archive"></a>
+			<a class="works" href="works.html"><img src="Images/works.png" alt="works"></a>
+			<a class="contact" href="contact.html"><img src="Images/contact.png" alt="contact"></a>
 		</div>
 	</section>
-	
-	
-	<footer>
-	
-	</footer>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
@@ -122,6 +135,33 @@ const layer3 = document.getElementById("layer3");
 
 		window.addEventListener("scroll", handleScroll);
 		
+// Create tooltips on hover
+const links = document.querySelectorAll('.links a');
+
+links.forEach(link => {
+    link.addEventListener('mouseover', (e) => {
+        const altText = link.querySelector('img').getAttribute('alt');
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = altText;
+        document.body.appendChild(tooltip);
+    });
+
+    link.addEventListener('mousemove', (e) => {
+        const tooltip = document.querySelector('.tooltip');
+        if (tooltip) {
+            tooltip.style.left = (e.pageX + 10) + 'px'; // Adjust position relative to cursor
+            tooltip.style.top = (e.pageY + 10) + 'px';
+        }
+    });
+
+    link.addEventListener('mouseout', () => {
+        const tooltip = document.querySelector('.tooltip');
+        if (tooltip) {
+            document.body.removeChild(tooltip);
+        }
+    });
+});
 	</script>
 </body>
 </html>
