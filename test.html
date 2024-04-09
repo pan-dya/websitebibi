@@ -9,7 +9,7 @@
 <body>
     <section id="landing">
 		<header>
-			<div class="menu" onclick="myFunction(this)">
+			<div class="menu" onclick="toggleMenu(this)">
   				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
@@ -23,6 +23,10 @@
 		<div class="landingText">
 			<p>Welcome to my Creative Journey</p>
 		</div>
+
+        <div id="slidingMenu" class="slidingMenu">
+            <img src="Images/menuSide.png" alt="Menu Side Image">
+        </div>
 	</section>
 	
 	<section id="teaser">
@@ -67,5 +71,23 @@
         </div>
 
 	</section>
+
+    <script>
+        function toggleMenu(x) {
+            x.classList.toggle("change");
+            var slidingMenu = document.getElementById('slidingMenu');
+            
+            // Get the computed style to determine the current position
+            var computedStyle = window.getComputedStyle(slidingMenu);
+            var rightValue = parseInt(computedStyle.getPropertyValue('right'));
+            if (rightValue < 0) {
+                // Menu is closed or closing, open it
+                slidingMenu.style.right = '0';
+            } else {
+                // Menu is open, close it
+                slidingMenu.style.right = '-1000px';
+            }
+        }
+    </script>
 </body>
 </html>
